@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
+import Likes from "./Likes";
 
 function App() {
   const [liked, setLiked] = useState(0);
@@ -25,6 +26,7 @@ function App() {
         </button>
         {liked}
       </h2>
+      <likes handleLike = {handleLike} handleDislike = {handleDislike} liked = {liked} />
     </div>
   );
 }
