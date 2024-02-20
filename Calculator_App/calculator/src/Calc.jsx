@@ -31,7 +31,7 @@ const Calculator = () => {
             readOnly
           />
           <div className="grid grid-cols-4 gap-2">
-            <button className='span-two'>AC</button>
+            <button className="calculator-button calculator-clear-button" onClick={clearInput}>AC</button>
             <button className="calculator-button" onClick={() => handleButtonClick('DEL')}>DEL</button>
             <button className="calculator-button" onClick={() => handleButtonClick('÷')}>÷</button>
             <button className="calculator-button" onClick={() => handleButtonClick('1')}>1</button>
@@ -48,7 +48,7 @@ const Calculator = () => {
             <button className="calculator-button" onClick={() => handleButtonClick('-')}>-</button>
             <button className="calculator-button" onClick={() => handleButtonClick('.')}>.</button>
             <button className="calculator-button" onClick={() => handleButtonClick('0')}>0</button>
-            <button className='span-two'>=</button>
+            <button className="calculator-button calculator-button-yellow" onClick={calculateResult}>=</button>
             <div className="result">
                 <p className="font-bold">Result: {result}</p>
             </div>
